@@ -3,6 +3,14 @@ from sqlalchemy.orm import Session
 from models import User, Questions, Choice, Answers
 
 
+# ساخت یک کاربر جدید
+user = User(name="Koko")
+db.add(user)      # اضافه کردن به دیتابیس
+db.commit()       # ذخیره تغییرات
+db.refresh(user)  # بروزرسانی شیء از دیتابیس
+print(user)       # نمایش کاربر
+
+
 pip install SQLAlchemydef 
 
 create_user(db: Session, name: str):
